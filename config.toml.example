@@ -18,12 +18,23 @@
     [models.llm."chatglm2-6b-int4"]
     type = "chatglm"
     path = "THUDM/chatglm2-6b-int4"
+    [models.llm."chatglm2-6b-32k"]
+    type = "chatglm"
+    path = "THUDM/chatglm2-6b-32k"
+
     [models.llm."phoenix-inst-chat-7b"]
     type = "phoenix"
     path = "FreedomIntelligence/phoenix-inst-chat-7b"
     [models.llm."phoenix-inst-chat-7b-int4"]
     type = "phoenix"
     path = "FreedomIntelligence/phoenix-inst-chat-7b-int4"
+
+    [models.llm."internlm-chat-7b-8k"]
+    type = "internlm"
+    path = "internlm/internlm-chat-7b-8k"
+    [models.llm."internlm-chat-7b"]
+    type = "internlm"
+    path = "internlm/internlm-chat-7b"
 
   [models.embeddings]
     [models.embeddings."text2vec-large-chinese"]

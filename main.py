@@ -1,7 +1,6 @@
 #!/usr/bin/env python
 # coding=utf-8
 import argparse
-import os
 import sys
 
 import toml
@@ -64,6 +63,11 @@ def main():
             print(f">> Use phoenix llm model {llm['path']}")
             from phoenix import init_phoenix
             context.tokenizer, context.model = init_phoenix(
+                llm['path'], args.device, args.gpus)
+        elif llm['type'] == 'internlm':
+            print(f">> Use internlm llm model {llm['path']}")
+            from internlm import init_internlm
+            context.tokenizer, context.model = init_internlm(
                 llm['path'], args.device, args.gpus)
         else:
             print(f"Unsupported LLM model type {llm['type']}")
